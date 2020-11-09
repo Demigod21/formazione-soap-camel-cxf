@@ -28,11 +28,18 @@
                      address="/person/"
                      serviceClass="org.example.formazione.soapcamelcxf.PersonEndpoint"/>
 
-    <camelContext xmlns="http://camel.apache.org/schema/blueprint">
+    <camelContext xmlns="http://camel.apache.org/schema/blueprint"
+                  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:soap="http://soapcamelcxf.formazione.example.org/">
 
         <route>
             <!-- route starts from the cxf webservice -->
             <from uri="cxf:bean:personEndpoint" />
+
+
+            <convertBodyTo type="org.example.formazione.soapcamelcxf.PersonDTO"/>
+
+            <log message="Got ${body}"/>
             <to uri="seda:person" />
             <transform>
                 <constant>OK-OK</constant>
