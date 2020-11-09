@@ -174,5 +174,17 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>qtest</id>
+            <properties>
+                <skip.quickstarts.tests>false</skip.quickstarts.tests>
+            </properties>
+            <build>
+                <defaultGoal>verify</defaultGoal>
+            </build>
+        </profile>
+    </profiles>
+
 
 </project>

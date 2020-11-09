@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soapcamelcxf.formazione.example.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <soap:person>
+            <PersonDTO>
+                <cognome>COGNOME</cognome>
+                <nome>NOME</nome>
+            </PersonDTO>
+        </soap:person>
+    </soapenv:Body>
+</soapenv:Envelope>
