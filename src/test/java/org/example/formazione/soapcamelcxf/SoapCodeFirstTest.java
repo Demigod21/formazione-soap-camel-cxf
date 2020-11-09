@@ -59,6 +59,6 @@ public class SoapCodeFirstTest {
         LOG.info("the response is ====> ");
         res = getStringFromInputStream(is);
         LOG.info(res);
-        Assert.assertTrue(res.contains("OK"));
+        Assert.assertTrue(res.contains("COGNOME"));
     }
 }

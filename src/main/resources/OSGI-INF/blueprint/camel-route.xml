@@ -38,11 +38,11 @@
 
 
             <convertBodyTo type="org.example.formazione.soapcamelcxf.PersonDTO"/>
+
             <log message="Got ${body}"/>
             <to uri="seda:person" />
-            <transform>
-                <constant>OK</constant>
-            </transform>
+            <convertBodyTo type="java.lang.String"/>
+
         </route>
 
         <!-- test route -->
